@@ -16,6 +16,9 @@ public class SynchronizedQueue<T> {
     public SynchronizedQueue(int capacity) {
         this.capacity = capacity;
         this.array = new ArrayList<>(capacity);
+        for (int i = 0; i < this.capacity; i++) {
+            this.array.add(null);
+        }
     }
 
     public void enqueue(T item) {
